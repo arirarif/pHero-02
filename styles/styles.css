@@ -1,0 +1,640 @@
+/* Common css */
+* {
+  --main-bg-color: #1c1c1c; /* Background color for the whole body */
+  --section-bg-color: #333333; /* Background color for main sections */
+  --accent-color: rgb(
+    230,
+    83,
+    60
+  ); /* Accent color for highlights and buttons */
+  --text-color: #ffffff; /* Main text color */
+  --heading-color: #ffffff; /* Color for headings */
+  --subtext-color: #cccccc; /* Color for subtexts */
+  --primary-font: "Inter", sans-serif; /* Primary font */
+  --base-font-size: 16px; /* Base font size for rem calculation */
+  --h1-font-size: 2.5rem; /* Font size for H1 headings */
+  --h2-font-size: 2rem; /* Font size for H2 headings */
+  --h3-font-size: 1.5rem; /* Font size for H3 headings */
+  --text-font-size: 1rem; /* Standard text size */
+  --small-text-size: 0.875rem; /* Smaller text size */
+  --section-width: 90%; /*all section regular width */
+}
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: var(--base-font-size);
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  color: var(--heading-color);
+  margin: 0.5rem 0;
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+p,
+a,
+li {
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+button {
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+/* Common css end */
+
+/* Header start */
+.header {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  padding: 1rem 0;
+  margin-top: 40px;
+}
+.nav-container {
+  width: var(--section-width);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: rgb(230, 83, 60);
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 800;
+}
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 39px;
+  padding: 4px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 46px;
+  transition: background-color 0.3s;
+}
+.nav-menu a:hover,
+.nav-menu .active {
+  background-color: var(--accent-color);
+}
+.nav-menu .active {
+  color: #fff;
+  font-weight: 900;
+  padding: 8px 25px 8px 25px;
+}
+/* Header End */
+
+/* banner section */
+.banner-section {
+  background: linear-gradient(
+    180deg,
+    rgb(17, 17, 17),
+    rgba(119, 119, 119, 0) 100%
+  );
+  width: var(--section-width);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url("https://via.placeholder.com/1200x600") no-repeat center
+    center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  text-align: left;
+  max-width: 50%;
+}
+.content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}
+.content p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+.buttons a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+.buttons a:first-child {
+  background-color: var(--accent-color);
+}
+.buttons a:last-child {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+.banner-image {
+  position: relative;
+  background-image: image("./images/image5.png");
+}
+.banner-image .info-box {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+.banner-image .info-box span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+.banner-image .info-box p {
+  margin: 0.5rem 0 0;
+  color: var(--subtext-color);
+}
+.banner-image .info-box.second {
+  top: 2rem;
+  right: 2rem;
+  bottom: auto;
+}
+/* banner section end */
+
+/* Habit Section start */
+
+.habits {
+  background-color: var(--habits-bg-color);
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 80px;
+  width: var(--section-width);
+  margin: 0 auto;
+}
+
+.habits h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.habits .subheading {
+  font-size: 1rem;
+  color: var(--subtext-color);
+  margin-bottom: 2rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.habits-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.habit {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.habit .circle {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--text-color);
+}
+
+.habit h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.habit p {
+  font-size: 0.875rem;
+  color: var(--subtext-color);
+}
+/* Habit Section end */
+
+/* Extra mile section start*/
+.extra-mile {
+  background-color: var(--section-bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  width: var(--section-width);
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.extra-mile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--container-width);
+  background-color: var(--section-bg-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.extra-mile-content .text {
+  flex: 1;
+  padding: 2rem;
+}
+
+.extra-mile-content .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.extra-mile-content .text p {
+  font-size: 1rem;
+  color: var(--subtext-color);
+  margin-bottom: 2rem;
+}
+
+.extra-mile-content .text .cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.extra-mile-content .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.extra-mile-content .image img {
+  max-width: 500px;
+  height: 600px;
+  height: auto;
+  border-radius: 18px;
+}
+/* Extra mile section end*/
+
+/* Training start */
+.training-exercises {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  width: var(--section-width);
+  margin: 0 auto;
+}
+
+.training-exercises .container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.training-exercises h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.training-exercises p {
+  margin-bottom: 3rem;
+  color: #aaa;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 20% 60% 20%; /* First row configuration */
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: var(--overlay-color);
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Specific row and column spanning for grid items */
+.grid-item:nth-child(1) {
+  grid-column: 1 / span 1;
+}
+
+.grid-item:nth-child(2) {
+  grid-column: 2 / span 1;
+}
+
+.grid-item:nth-child(3) {
+  grid-column: 3 / span 1;
+}
+
+.grid-item:nth-child(4) {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  grid-template-columns: 40% 20% 40%; /* Second row configuration */
+}
+
+.grid-item:nth-child(5) {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.grid-item:nth-child(6) {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+/* Training end */
+
+
+/* BMI calculator start */
+.bmi-calculator {
+    background-color: #252525;
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.bmi-calculator .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bmi-calculator h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.bmi-calculator p {
+    margin-bottom: 2rem;
+    color: #aaa;
+}
+
+.bmi-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bmi-chart, .bmi-form {
+    background-color: #1c1c1c;
+    padding: 2rem;
+    border-radius: 8px;
+    flex-basis: 45%;
+}
+
+.bmi-chart table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.bmi-chart th, .bmi-chart td {
+    border: 1px solid #333;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.bmi-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bmi-form .form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.bmi-form .form-row input,
+.bmi-form .form-row select {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.bmi-form .form-row select {
+    appearance: none;
+    background-image: url('path-to-arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+}
+
+.bmi-form button {
+    padding: 0.75rem;
+    background-color: #f04e23;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bmi-form .form-row:last-child {
+    flex-direction: column;
+}
+
+.bmi-form .form-row:last-child select {
+    width: 100%;
+}
+
+/* BMI calculator end */
+
+/* Team section start */
+.team-section {
+    background-color: #252525;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.team-section .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-section p {
+    margin-bottom: 2rem;
+    color: #aaa;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #333;
+    text-align: left;
+    padding: 1rem;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.member-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-info p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Team section end */
+
+/* Footer start */
+
+.footer-section {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+.footer-section .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.footer-logo h2 {
+    color: #ff5722; /* Custom color for the logo */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    color: #aaa;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 0.875rem;
+}
+
+/* Footer End */
